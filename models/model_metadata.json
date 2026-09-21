@@ -1,0 +1,905 @@
+{
+  "latest_version": "fault_classifier_v4",
+  "versions": {
+    "fault_classifier_v1": {
+      "version": "fault_classifier_v1",
+      "timestamp": "2026-09-21 23:50:10",
+      "dataset_size": 42000,
+      "training_size": 33600,
+      "testing_size": 8400,
+      "feature_count": 14,
+      "class_count": 7,
+      "accuracy": 0.857,
+      "macro_f1": 0.8466,
+      "weighted_f1": 0.8574,
+      "feature_list": [
+        "altitude_m",
+        "ambient_temp_c",
+        "ambient_pressure_kpa",
+        "throttle",
+        "rpm",
+        "map_kpa",
+        "engine_load",
+        "power_kw",
+        "fuel_flow_lph",
+        "cht_c",
+        "egt_c",
+        "oil_pressure_kpa",
+        "oil_temperature_c",
+        "vibration_g"
+      ],
+      "class_list": [
+        "bearing_degradation",
+        "cooling_degradation",
+        "fuel_restriction",
+        "misfire",
+        "normal",
+        "oil_pressure_degradation",
+        "sensor_drift"
+      ],
+      "confusion_matrix": [
+        [
+          955,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1427,
+          0,
+          0,
+          2,
+          0,
+          131
+        ],
+        [
+          0,
+          0,
+          743,
+          192,
+          25,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          303,
+          601,
+          172,
+          1,
+          0
+        ],
+        [
+          9,
+          0,
+          80,
+          156,
+          1067,
+          3,
+          5
+        ],
+        [
+          3,
+          0,
+          0,
+          11,
+          60,
+          1486,
+          0
+        ],
+        [
+          1,
+          18,
+          0,
+          0,
+          21,
+          0,
+          920
+        ]
+      ],
+      "feature_importance": [
+        {
+          "feature": "vibration_g",
+          "importance": 0.2
+        },
+        {
+          "feature": "oil_pressure_kpa",
+          "importance": 0.1476
+        },
+        {
+          "feature": "cht_c",
+          "importance": 0.1436
+        },
+        {
+          "feature": "oil_temperature_c",
+          "importance": 0.107
+        },
+        {
+          "feature": "egt_c",
+          "importance": 0.0762
+        },
+        {
+          "feature": "power_kw",
+          "importance": 0.0578
+        },
+        {
+          "feature": "throttle",
+          "importance": 0.0545
+        },
+        {
+          "feature": "engine_load",
+          "importance": 0.0453
+        },
+        {
+          "feature": "ambient_pressure_kpa",
+          "importance": 0.0417
+        },
+        {
+          "feature": "altitude_m",
+          "importance": 0.0413
+        },
+        {
+          "feature": "rpm",
+          "importance": 0.0372
+        },
+        {
+          "feature": "map_kpa",
+          "importance": 0.0244
+        },
+        {
+          "feature": "fuel_flow_lph",
+          "importance": 0.016
+        },
+        {
+          "feature": "ambient_temp_c",
+          "importance": 0.0073
+        }
+      ],
+      "classification_report": {
+        "bearing_degradation": {
+          "precision": 0.9835221421215242,
+          "recall": 0.9947916666666666,
+          "f1-score": 0.9891248058001035,
+          "support": 960.0
+        },
+        "cooling_degradation": {
+          "precision": 0.9875432525951557,
+          "recall": 0.9147435897435897,
+          "f1-score": 0.9497504159733777,
+          "support": 1560.0
+        },
+        "fuel_restriction": {
+          "precision": 0.6598579040852576,
+          "recall": 0.7739583333333333,
+          "f1-score": 0.7123681687440077,
+          "support": 960.0
+        },
+        "misfire": {
+          "precision": 0.6253902185223725,
+          "recall": 0.5564814814814815,
+          "f1-score": 0.5889269965703087,
+          "support": 1080.0
+        },
+        "normal": {
+          "precision": 0.7897853441894893,
+          "recall": 0.8083333333333333,
+          "f1-score": 0.798951703481842,
+          "support": 1320.0
+        },
+        "oil_pressure_degradation": {
+          "precision": 0.9973154362416108,
+          "recall": 0.9525641025641025,
+          "f1-score": 0.9744262295081967,
+          "support": 1560.0
+        },
+        "sensor_drift": {
+          "precision": 0.8712121212121212,
+          "recall": 0.9583333333333334,
+          "f1-score": 0.9126984126984127,
+          "support": 960.0
+        },
+        "accuracy": 0.8570238095238095,
+        "macro avg": {
+          "precision": 0.8449466312810758,
+          "recall": 0.85131512006512,
+          "f1-score": 0.8466066761108928,
+          "support": 8400.0
+        },
+        "weighted avg": {
+          "precision": 0.860515014957356,
+          "recall": 0.8570238095238095,
+          "f1-score": 0.8573805599519101,
+          "support": 8400.0
+        }
+      },
+      "training_configuration": {
+        "n_estimators": 250,
+        "max_depth": 14,
+        "min_samples_leaf": 3,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    "fault_classifier_v2": {
+      "version": "fault_classifier_v2",
+      "timestamp": "2026-09-21 23:50:24",
+      "dataset_size": 42000,
+      "training_size": 33600,
+      "testing_size": 8400,
+      "feature_count": 14,
+      "class_count": 7,
+      "accuracy": 0.857,
+      "macro_f1": 0.8466,
+      "weighted_f1": 0.8574,
+      "feature_list": [
+        "altitude_m",
+        "ambient_temp_c",
+        "ambient_pressure_kpa",
+        "throttle",
+        "rpm",
+        "map_kpa",
+        "engine_load",
+        "power_kw",
+        "fuel_flow_lph",
+        "cht_c",
+        "egt_c",
+        "oil_pressure_kpa",
+        "oil_temperature_c",
+        "vibration_g"
+      ],
+      "class_list": [
+        "bearing_degradation",
+        "cooling_degradation",
+        "fuel_restriction",
+        "misfire",
+        "normal",
+        "oil_pressure_degradation",
+        "sensor_drift"
+      ],
+      "confusion_matrix": [
+        [
+          955,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1427,
+          0,
+          0,
+          2,
+          0,
+          131
+        ],
+        [
+          0,
+          0,
+          743,
+          192,
+          25,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          303,
+          601,
+          172,
+          1,
+          0
+        ],
+        [
+          9,
+          0,
+          80,
+          156,
+          1067,
+          3,
+          5
+        ],
+        [
+          3,
+          0,
+          0,
+          11,
+          60,
+          1486,
+          0
+        ],
+        [
+          1,
+          18,
+          0,
+          0,
+          21,
+          0,
+          920
+        ]
+      ],
+      "feature_importance": [
+        {
+          "feature": "vibration_g",
+          "importance": 0.2
+        },
+        {
+          "feature": "oil_pressure_kpa",
+          "importance": 0.1476
+        },
+        {
+          "feature": "cht_c",
+          "importance": 0.1436
+        },
+        {
+          "feature": "oil_temperature_c",
+          "importance": 0.107
+        },
+        {
+          "feature": "egt_c",
+          "importance": 0.0762
+        },
+        {
+          "feature": "power_kw",
+          "importance": 0.0578
+        },
+        {
+          "feature": "throttle",
+          "importance": 0.0545
+        },
+        {
+          "feature": "engine_load",
+          "importance": 0.0453
+        },
+        {
+          "feature": "ambient_pressure_kpa",
+          "importance": 0.0417
+        },
+        {
+          "feature": "altitude_m",
+          "importance": 0.0413
+        },
+        {
+          "feature": "rpm",
+          "importance": 0.0372
+        },
+        {
+          "feature": "map_kpa",
+          "importance": 0.0244
+        },
+        {
+          "feature": "fuel_flow_lph",
+          "importance": 0.016
+        },
+        {
+          "feature": "ambient_temp_c",
+          "importance": 0.0073
+        }
+      ],
+      "classification_report": {
+        "bearing_degradation": {
+          "precision": 0.9835221421215242,
+          "recall": 0.9947916666666666,
+          "f1-score": 0.9891248058001035,
+          "support": 960.0
+        },
+        "cooling_degradation": {
+          "precision": 0.9875432525951557,
+          "recall": 0.9147435897435897,
+          "f1-score": 0.9497504159733777,
+          "support": 1560.0
+        },
+        "fuel_restriction": {
+          "precision": 0.6598579040852576,
+          "recall": 0.7739583333333333,
+          "f1-score": 0.7123681687440077,
+          "support": 960.0
+        },
+        "misfire": {
+          "precision": 0.6253902185223725,
+          "recall": 0.5564814814814815,
+          "f1-score": 0.5889269965703087,
+          "support": 1080.0
+        },
+        "normal": {
+          "precision": 0.7897853441894893,
+          "recall": 0.8083333333333333,
+          "f1-score": 0.798951703481842,
+          "support": 1320.0
+        },
+        "oil_pressure_degradation": {
+          "precision": 0.9973154362416108,
+          "recall": 0.9525641025641025,
+          "f1-score": 0.9744262295081967,
+          "support": 1560.0
+        },
+        "sensor_drift": {
+          "precision": 0.8712121212121212,
+          "recall": 0.9583333333333334,
+          "f1-score": 0.9126984126984127,
+          "support": 960.0
+        },
+        "accuracy": 0.8570238095238095,
+        "macro avg": {
+          "precision": 0.8449466312810758,
+          "recall": 0.85131512006512,
+          "f1-score": 0.8466066761108928,
+          "support": 8400.0
+        },
+        "weighted avg": {
+          "precision": 0.860515014957356,
+          "recall": 0.8570238095238095,
+          "f1-score": 0.8573805599519101,
+          "support": 8400.0
+        }
+      },
+      "training_configuration": {
+        "n_estimators": 250,
+        "max_depth": 14,
+        "min_samples_leaf": 3,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    "fault_classifier_v3": {
+      "version": "fault_classifier_v3",
+      "timestamp": "2026-09-22 00:16:28",
+      "dataset_size": 42000,
+      "training_size": 33600,
+      "testing_size": 8400,
+      "feature_count": 14,
+      "class_count": 7,
+      "accuracy": 0.857,
+      "macro_f1": 0.8466,
+      "weighted_f1": 0.8574,
+      "feature_list": [
+        "altitude_m",
+        "ambient_temp_c",
+        "ambient_pressure_kpa",
+        "throttle",
+        "rpm",
+        "map_kpa",
+        "engine_load",
+        "power_kw",
+        "fuel_flow_lph",
+        "cht_c",
+        "egt_c",
+        "oil_pressure_kpa",
+        "oil_temperature_c",
+        "vibration_g"
+      ],
+      "class_list": [
+        "bearing_degradation",
+        "cooling_degradation",
+        "fuel_restriction",
+        "misfire",
+        "normal",
+        "oil_pressure_degradation",
+        "sensor_drift"
+      ],
+      "confusion_matrix": [
+        [
+          955,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1427,
+          0,
+          0,
+          2,
+          0,
+          131
+        ],
+        [
+          0,
+          0,
+          743,
+          192,
+          25,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          303,
+          601,
+          172,
+          1,
+          0
+        ],
+        [
+          9,
+          0,
+          80,
+          156,
+          1067,
+          3,
+          5
+        ],
+        [
+          3,
+          0,
+          0,
+          11,
+          60,
+          1486,
+          0
+        ],
+        [
+          1,
+          18,
+          0,
+          0,
+          21,
+          0,
+          920
+        ]
+      ],
+      "feature_importance": [
+        {
+          "feature": "vibration_g",
+          "importance": 0.2
+        },
+        {
+          "feature": "oil_pressure_kpa",
+          "importance": 0.1476
+        },
+        {
+          "feature": "cht_c",
+          "importance": 0.1436
+        },
+        {
+          "feature": "oil_temperature_c",
+          "importance": 0.107
+        },
+        {
+          "feature": "egt_c",
+          "importance": 0.0762
+        },
+        {
+          "feature": "power_kw",
+          "importance": 0.0578
+        },
+        {
+          "feature": "throttle",
+          "importance": 0.0545
+        },
+        {
+          "feature": "engine_load",
+          "importance": 0.0453
+        },
+        {
+          "feature": "ambient_pressure_kpa",
+          "importance": 0.0417
+        },
+        {
+          "feature": "altitude_m",
+          "importance": 0.0413
+        },
+        {
+          "feature": "rpm",
+          "importance": 0.0372
+        },
+        {
+          "feature": "map_kpa",
+          "importance": 0.0244
+        },
+        {
+          "feature": "fuel_flow_lph",
+          "importance": 0.016
+        },
+        {
+          "feature": "ambient_temp_c",
+          "importance": 0.0073
+        }
+      ],
+      "classification_report": {
+        "bearing_degradation": {
+          "precision": 0.9835221421215242,
+          "recall": 0.9947916666666666,
+          "f1-score": 0.9891248058001035,
+          "support": 960.0
+        },
+        "cooling_degradation": {
+          "precision": 0.9875432525951557,
+          "recall": 0.9147435897435897,
+          "f1-score": 0.9497504159733777,
+          "support": 1560.0
+        },
+        "fuel_restriction": {
+          "precision": 0.6598579040852576,
+          "recall": 0.7739583333333333,
+          "f1-score": 0.7123681687440077,
+          "support": 960.0
+        },
+        "misfire": {
+          "precision": 0.6253902185223725,
+          "recall": 0.5564814814814815,
+          "f1-score": 0.5889269965703087,
+          "support": 1080.0
+        },
+        "normal": {
+          "precision": 0.7897853441894893,
+          "recall": 0.8083333333333333,
+          "f1-score": 0.798951703481842,
+          "support": 1320.0
+        },
+        "oil_pressure_degradation": {
+          "precision": 0.9973154362416108,
+          "recall": 0.9525641025641025,
+          "f1-score": 0.9744262295081967,
+          "support": 1560.0
+        },
+        "sensor_drift": {
+          "precision": 0.8712121212121212,
+          "recall": 0.9583333333333334,
+          "f1-score": 0.9126984126984127,
+          "support": 960.0
+        },
+        "accuracy": 0.8570238095238095,
+        "macro avg": {
+          "precision": 0.8449466312810758,
+          "recall": 0.85131512006512,
+          "f1-score": 0.8466066761108928,
+          "support": 8400.0
+        },
+        "weighted avg": {
+          "precision": 0.860515014957356,
+          "recall": 0.8570238095238095,
+          "f1-score": 0.8573805599519101,
+          "support": 8400.0
+        }
+      },
+      "training_configuration": {
+        "n_estimators": 250,
+        "max_depth": 14,
+        "min_samples_leaf": 3,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    "fault_classifier_v4": {
+      "version": "fault_classifier_v4",
+      "timestamp": "2026-09-22 00:18:19",
+      "dataset_size": 42000,
+      "training_size": 33600,
+      "testing_size": 8400,
+      "feature_count": 14,
+      "class_count": 7,
+      "accuracy": 0.857,
+      "macro_f1": 0.8466,
+      "weighted_f1": 0.8574,
+      "feature_list": [
+        "altitude_m",
+        "ambient_temp_c",
+        "ambient_pressure_kpa",
+        "throttle",
+        "rpm",
+        "map_kpa",
+        "engine_load",
+        "power_kw",
+        "fuel_flow_lph",
+        "cht_c",
+        "egt_c",
+        "oil_pressure_kpa",
+        "oil_temperature_c",
+        "vibration_g"
+      ],
+      "class_list": [
+        "bearing_degradation",
+        "cooling_degradation",
+        "fuel_restriction",
+        "misfire",
+        "normal",
+        "oil_pressure_degradation",
+        "sensor_drift"
+      ],
+      "confusion_matrix": [
+        [
+          955,
+          0,
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          1427,
+          0,
+          0,
+          2,
+          0,
+          131
+        ],
+        [
+          0,
+          0,
+          743,
+          192,
+          25,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          303,
+          601,
+          172,
+          1,
+          0
+        ],
+        [
+          9,
+          0,
+          80,
+          156,
+          1067,
+          3,
+          5
+        ],
+        [
+          3,
+          0,
+          0,
+          11,
+          60,
+          1486,
+          0
+        ],
+        [
+          1,
+          18,
+          0,
+          0,
+          21,
+          0,
+          920
+        ]
+      ],
+      "feature_importance": [
+        {
+          "feature": "vibration_g",
+          "importance": 0.2
+        },
+        {
+          "feature": "oil_pressure_kpa",
+          "importance": 0.1476
+        },
+        {
+          "feature": "cht_c",
+          "importance": 0.1436
+        },
+        {
+          "feature": "oil_temperature_c",
+          "importance": 0.107
+        },
+        {
+          "feature": "egt_c",
+          "importance": 0.0762
+        },
+        {
+          "feature": "power_kw",
+          "importance": 0.0578
+        },
+        {
+          "feature": "throttle",
+          "importance": 0.0545
+        },
+        {
+          "feature": "engine_load",
+          "importance": 0.0453
+        },
+        {
+          "feature": "ambient_pressure_kpa",
+          "importance": 0.0417
+        },
+        {
+          "feature": "altitude_m",
+          "importance": 0.0413
+        },
+        {
+          "feature": "rpm",
+          "importance": 0.0372
+        },
+        {
+          "feature": "map_kpa",
+          "importance": 0.0244
+        },
+        {
+          "feature": "fuel_flow_lph",
+          "importance": 0.016
+        },
+        {
+          "feature": "ambient_temp_c",
+          "importance": 0.0073
+        }
+      ],
+      "classification_report": {
+        "bearing_degradation": {
+          "precision": 0.9835221421215242,
+          "recall": 0.9947916666666666,
+          "f1-score": 0.9891248058001035,
+          "support": 960.0
+        },
+        "cooling_degradation": {
+          "precision": 0.9875432525951557,
+          "recall": 0.9147435897435897,
+          "f1-score": 0.9497504159733777,
+          "support": 1560.0
+        },
+        "fuel_restriction": {
+          "precision": 0.6598579040852576,
+          "recall": 0.7739583333333333,
+          "f1-score": 0.7123681687440077,
+          "support": 960.0
+        },
+        "misfire": {
+          "precision": 0.6253902185223725,
+          "recall": 0.5564814814814815,
+          "f1-score": 0.5889269965703087,
+          "support": 1080.0
+        },
+        "normal": {
+          "precision": 0.7897853441894893,
+          "recall": 0.8083333333333333,
+          "f1-score": 0.798951703481842,
+          "support": 1320.0
+        },
+        "oil_pressure_degradation": {
+          "precision": 0.9973154362416108,
+          "recall": 0.9525641025641025,
+          "f1-score": 0.9744262295081967,
+          "support": 1560.0
+        },
+        "sensor_drift": {
+          "precision": 0.8712121212121212,
+          "recall": 0.9583333333333334,
+          "f1-score": 0.9126984126984127,
+          "support": 960.0
+        },
+        "accuracy": 0.8570238095238095,
+        "macro avg": {
+          "precision": 0.8449466312810758,
+          "recall": 0.85131512006512,
+          "f1-score": 0.8466066761108928,
+          "support": 8400.0
+        },
+        "weighted avg": {
+          "precision": 0.860515014957356,
+          "recall": 0.8570238095238095,
+          "f1-score": 0.8573805599519101,
+          "support": 8400.0
+        }
+      },
+      "training_configuration": {
+        "n_estimators": 250,
+        "max_depth": 14,
+        "min_samples_leaf": 3,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    }
+  }
+}
